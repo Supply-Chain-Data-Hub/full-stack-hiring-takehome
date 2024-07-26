@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend/becompanyportal
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/becompanyportal:/backend/becompanyportal
+    environment:
+      - DEBUG=True
+    command: python manage.py runserver 0.0.0.0:8000
+
+  frontend:
+    build:
+      context: ./frontend/company-portal
+      dockerfile: Dockerfile
+      args:
+        - VITE_BACKEND_ENDPOINT_URL=${VITE_BACKEND_ENDPOINT_URL:-http://localhost:8000/api/}
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend/company-portal:/frontend/company-portal
+      - /frontend/company-portal/node_modules
+    environment:
+      - VITE_BACKEND_ENDPOINT_URL=${VITE_BACKEND_ENDPOINT_URL:-http://localhost:8000/api/}
+    depends_on:
+      - backend
+
+volumes:
+  node_modules:

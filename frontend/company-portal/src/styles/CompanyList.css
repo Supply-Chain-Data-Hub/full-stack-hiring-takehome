@@ -1,0 +1,22 @@
+.company-list {
+    margin: 48px 0;
+}
+
+.company-list__search {
+    text-align: center;
+}
+
+.company-list__input {
+    border-radius: 8px;
+    margin: 0 0 24px;
+    padding: 12px;
+    width: 75%;
+}
+
+.company-list__card {
+    box-shadow: var(--shadow);
+}
+
+.company-list__card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .1), 0 0 12px rgba(0, 0, 0, .08);
+}

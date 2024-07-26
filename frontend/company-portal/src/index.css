@@ -1,0 +1,20 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --lg-max-width: 840px;
+  --xl-max-width: 1174px;
+  --shadow: 0 4px 4px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .08);
+}
+
+a {
+  font-weight: 500;
+  color: #0fa45c;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #f05500;
+}
+
+body {
+  margin: 0;
+}

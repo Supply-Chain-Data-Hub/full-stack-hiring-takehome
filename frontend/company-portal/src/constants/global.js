@@ -1,0 +1,5 @@
+const POLYLINE_COLORS = ["#FF6384", "#36A2EB", "#FFCE56"];
+
+export {
+    POLYLINE_COLORS
+};
