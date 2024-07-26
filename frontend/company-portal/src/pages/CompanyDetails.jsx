@@ -18,7 +18,6 @@ const CompanyDetails = () => {
           `${import.meta.env.VITE_BACKEND_ENDPOINT_URL}companies/${companyId}/`
         );
         const data = await response.json();
-        console.log(" companies ", data);
         setCompanyDetails(data);
       } catch (e) {
         console.error(e);
