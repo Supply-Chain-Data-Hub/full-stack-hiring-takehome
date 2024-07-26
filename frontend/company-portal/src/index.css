@@ -1,7 +1,5 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --lg-max-width: 840px;
-  --xl-max-width: 1174px;
   --shadow: 0 4px 4px rgba(0, 0, 0, .1), 0 0 8px rgba(0, 0, 0, .08);
 }
 
