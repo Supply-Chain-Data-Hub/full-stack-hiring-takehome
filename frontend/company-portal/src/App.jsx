@@ -3,8 +3,12 @@ import CompanyDetails from "./pages/CompanyDetails";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import { Container } from "react-bootstrap";
+import { ToastContext } from "./context/ToastContext";
+import CustomToast from "./components/CustomToast";
+import { useContext } from "react";
 
 function App() {
+  const { toast, setToast } = useContext(ToastContext);
   return (
     <>
       <Navbar bg="dark">
@@ -22,6 +26,15 @@ function App() {
           />
         </Routes>
       </div>
+      {toast != null && (
+        <CustomToast
+          onClose={() => {
+            setToast(null);
+          }}
+          message={toast?.message}
+          variant={toast?.variant}
+        />
+      )}
     </>
   );
 }

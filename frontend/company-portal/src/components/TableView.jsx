@@ -1,6 +1,18 @@
 import { useState } from "react";
 import Table from 'react-bootstrap/Table'
 
+/**
+ * TableView component displays a sortable table of location data.
+ * 
+ * @param {Array} locations - The array of location objects to display in the table.
+ * @param {number} mainLatitude - The latitude of the main location to be highlighted.
+ * @param {number} mainLongitude - The longitude of the main location to be highlighted.
+ * 
+ * @returns {JSX.Element} - Returns the JSX element for the TableView component.
+ * 
+ * The component allows sorting by clicking on column headers.
+ * It highlights the main location with a red marker icon and other locations with a blue marker icon.
+ */
 const TableView = ({ locations, mainLatitude, mainLongitude }) => {
   const [sortKey, setSortKey] = useState("name");
   const [sortOrder, setSortOrder] = useState("asc");

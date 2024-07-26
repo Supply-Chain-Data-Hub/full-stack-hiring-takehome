@@ -22,6 +22,13 @@ ChartJS.register(
   Legend
 );
 
+/**
+ * DistanceChart component displays a bar chart of distances between location pairs.
+ * 
+ * @param {Array} locations - The array of location objects to calculate distances between.
+ * @returns {JSX.Element} - Returns the JSX element for the DistanceChart component.
+ * 
+ */
 const DistanceChart = ({ locations }) => {
 
   const metersToMiles = (meters) => meters / 1609.344;
@@ -34,6 +41,9 @@ const DistanceChart = ({ locations }) => {
     }
   };
 
+  /*
+   * calculating the distances between the locations for all the combination
+  */
   const calculateDistances = (locations) => {
     return locations.flatMap((location1, i) =>
       locations.slice(i + 1).map((location2) => {

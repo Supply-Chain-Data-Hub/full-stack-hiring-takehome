@@ -1,25 +1,35 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import "../styles/CompanyList.css";
+import { ToastContext } from "../context/ToastContext";
 
 const CompanyList = () => {
   const [companiesData, setCompaniesData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const { setToast } = useContext(ToastContext);
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        `${import.meta.env.VITE_BACKEND_ENDPOINT_URL}companies/`
-      );
-      const data = await response.json();
-      setCompaniesData(data);
+      try{
+        console.log("try ");
+        const response = await fetch(
+          `${import.meta.env.VITE_BACKEND_ENDPOINT_URL}companies/`
+        );
+        const data = await response?.json();
+        setCompaniesData(data);
+      } catch(err) {
+        setToast({
+          message: "Something went wrong. Please try again later",
+          variant: "error"
+        })
+      }
     })();
   }, []);
 
-  const filteredCompanies = companiesData?.filter((company) =>
+  const filteredCompanies = companiesData?.length ? companiesData?.filter((company) =>
     company?.name?.toLowerCase()?.includes(searchTerm?.toLowerCase())
-  );
+  ) : [];
 
   return (
     <div className="company-list">

@@ -30,6 +30,23 @@ const ChangeView = ({ locations }) => {
   return null;
 };
 
+/**
+ * ViewMap component displays an interactive map with markers and lines connecting locations.
+ * 
+ * @param {Array} locations - The array of location objects to display on the map.
+ * @param {number} mainLatitude - The latitude of the main location to be highlighted.
+ * @param {number} mainLongitude - The longitude of the main location to be highlighted.
+ * 
+ * @returns {JSX.Element} - Returns the JSX element for the ViewMap component.
+ * 
+ * The component:
+ * - Centers the map at [0, 0] with a zoom level of 2.
+ * - Uses OpenStreetMap tiles for the map background.
+ * - Displays markers for each location.
+ * - Highlights the main location with a PrimaryIcon and other locations with a SecondaryIcon.
+ * - Displays a popup with the name and address of each location when a marker is clicked.
+ * - Draws lines connecting all pairs of locations.
+ */
 const ViewMap = ({ locations, mainLatitude, mainLongitude }) => {
   const checkIsMain = (currLatitude, currLongitude) => {
     if (currLatitude === mainLatitude && currLongitude === mainLongitude) {

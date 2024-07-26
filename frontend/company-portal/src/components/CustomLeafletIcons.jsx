@@ -1,5 +1,9 @@
 import L from "leaflet";
 
+/**
+ * Custom Leaflet Icons module exports two pre-configured Leaflet icons: PrimaryIcon and SecondaryIcon.
+ * @returns {object} - Returns an object containing the PrimaryIcon and SecondaryIcon Leaflet icons.
+ */
 const PrimaryIcon = new L.Icon({
   iconUrl:
     "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
