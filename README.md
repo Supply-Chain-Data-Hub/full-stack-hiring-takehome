@@ -4,6 +4,10 @@
 
   <img width="736" alt="image" src="https://github.com/user-attachments/assets/2224882a-d993-470b-a50e-73bb79fb5b47">
 
+  Search functionality to find companies by name
+
+  ![image](https://github.com/user-attachments/assets/f275caba-4130-4d4f-89f4-6c6438e32931)
+
 - Company Details Page
   
   ![image](https://github.com/user-attachments/assets/28e82cca-5817-4d5a-aa50-a3f7e72abeb4)
