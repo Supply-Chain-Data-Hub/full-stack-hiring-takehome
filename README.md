@@ -1,10 +1,32 @@
+# Screenshots of the application:
+
+- Company List Page
+
+  <img width="736" alt="image" src="https://github.com/user-attachments/assets/2224882a-d993-470b-a50e-73bb79fb5b47">
+
+- Company Details Page
+  
+  ![image](https://github.com/user-attachments/assets/28e82cca-5817-4d5a-aa50-a3f7e72abeb4)
+
+  Popup to show the details of the marker in the map
+
+  ![image](https://github.com/user-attachments/assets/65cabac3-96fe-4d03-839e-8a5492f13a69)
+
+  Chart - Comparison of distance b/w locations
+
+  ![image](https://github.com/user-attachments/assets/920baae6-e352-4a2a-be5d-f7e533127885)
+
+# Swagger Documentations
+
+  ![image](https://github.com/user-attachments/assets/bd7076d4-167f-4c09-91d0-e6793bf552b2)
+
 # Instructions to run the application in local
 
 I have pushed the docker images to my dockerhub respostories and made it public
 
 We can run this application in mulitple ways with & without using docker. Below are the instructions for 3 different ways:
 
-## Optimal Number of Steps to make the app up & running to check in browser
+## 1st - Optimal Number of Steps to make the app up & running to check in browser
 
 - Clone this Repo
 - make sure you are in the root of this project where the docker-compose.yaml file exists
@@ -17,7 +39,7 @@ We can run this application in mulitple ways with & without using docker. Below 
 - To stop this, Run "docker-compose down"
 
 
-## Pull my docker image from my dockerhub repository and run using Docker
+## 2nd - Pull my docker image from my dockerhub repository and run using Docker
 
 - Download Docker (i.e Docker Desktop) if it is not installed in your system and install it.
   - Ensure Docker & Docker Desktop installed in your system.
@@ -49,7 +71,7 @@ services:
 
 - Additional Info (My DockerHub Profile URL) - https://hub.docker.com/u/gsprasanna
 
-## Clone & run the application in the local
+## 3rd - Clone & run the application in the local
 
 - Clone this Repo in vs code
 - open terminal tab
