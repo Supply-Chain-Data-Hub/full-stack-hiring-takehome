@@ -2,7 +2,20 @@
 
 I have pushed the docker images to my dockerhub respostories and made it public
 
-We can run this application in mulitple ways with & without using docker. Below are the instructions for 2 ways:
+We can run this application in mulitple ways with & without using docker. Below are the instructions for 3 different ways:
+
+## Optimal Step to make the app up & running to check in browser
+
+- Clone this Repo
+- make sure you are in the root of this project where the docker-compose.yaml file exists
+- Start/Open the Docker (i.e Docker Desktop to start the docker daemon running)
+- Run this command in the terminal in root path of this repo
+  - "docker-compose up"
+- Application will start run at http://localhost:5173/
+- Swagger API documentation runs at http://localhost:8000/swagger/
+
+- To stop this, Run "docker-compose down"
+
 
 ## Pull my docker image and run using Docker (Optimal Step to make the app up & running to check in browser)
 
@@ -13,8 +26,6 @@ We can run this application in mulitple ways with & without using docker. Below 
 - copy & paste the below yaml configuration
 
 ```
-version: '3.8'
-
 services:
   backend:
     image: gsprasanna/python-backend:latest
