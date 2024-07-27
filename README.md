@@ -36,13 +36,21 @@ services:
 
 ## Clone & run the application in the local
 
-- Clone this Repo
-- In the terminal, Go to the backend/becompanyportal
-- Run "python3 manage.py runserver"
-    - This will start the backend development server at http://127.0.0.1:8000/
-- open new terminal tab
+- Clone this Repo in vs code
+- open terminal tab
 - Go to the frontend/company-portal
+- create a .env file under frontend/company-portal
+  - add this variable (make sure the key value is correct)
+      VITE_BACKEND_ENDPOINT_URL = http://127.0.0.1:8000/api/
 - Run "npm install"
 - Run "npm run dev"
     - This will start the frontend development server at http://localhost:5173/
+- In the new terminal, Go to the backend/becompanyportal
+- check if pip3 is intalled in your install. if not make sure it is installed.
+- since Django 5 requires python 3.10 plus. upgrade the python to latest (eg : 3.12.3)
+- Run "pip3 install --no-cache-dir -r requirements.txt"
+    - (Note: if above command is having issue. try below command without quotes
+        "pip3 install --no-cache-dir -r requirements.txt --break-system-packages")
+- Run "python3 manage.py runserver"
+    - This will start the backend development server at http://127.0.0.1:8000/
 
