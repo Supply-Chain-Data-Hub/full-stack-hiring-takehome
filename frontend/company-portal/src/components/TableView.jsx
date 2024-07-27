@@ -17,7 +17,7 @@ const TableView = ({ locations, mainLatitude, mainLongitude }) => {
   const [sortKey, setSortKey] = useState("name");
   const [sortOrder, setSortOrder] = useState("asc");
   
-  const sortedLocations = [...locations].sort((a, b) => {
+  const sortedLocations = [...locations]?.sort((a, b) => {
     if (a[sortKey] < b[sortKey]) return sortOrder === "asc" ? -1 : 1;
     if (a[sortKey] > b[sortKey]) return sortOrder === "asc" ? 1 : -1;
     return 0;
@@ -55,12 +55,12 @@ const TableView = ({ locations, mainLatitude, mainLongitude }) => {
         <tbody>
           {sortedLocations?.map((location) => (
             <tr
-              key={location.location_id}
+              key={location?.location_id}
             >
-              <td>{checkIsMain(parseFloat(location.latitude), parseFloat(location.longitude)) ? 
+              <td>{checkIsMain(parseFloat(location?.latitude), parseFloat(location?.longitude)) ? 
                 <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png" style={{ width: '12px', height: '20px' }} /> : 
                 <img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png" style={{ width: '12px', height: '20px' }}  />}
-                {`  ${location.name}`} 
+                {`  ${location?.name}`} 
               </td>
               <td>{location.address}</td>
               <td>{location.latitude}</td>

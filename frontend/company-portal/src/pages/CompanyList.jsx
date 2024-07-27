@@ -12,7 +12,6 @@ const CompanyList = () => {
   useEffect(() => {
     (async () => {
       try{
-        console.log("try ");
         const response = await fetch(
           `${import.meta.env.VITE_BACKEND_ENDPOINT_URL}companies/`
         );
@@ -38,7 +37,7 @@ const CompanyList = () => {
           type="text"
           placeholder="Search companies by name"
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={(e) => setSearchTerm(e?.target?.value)}
           className="company-list__input"
         />
       </div>

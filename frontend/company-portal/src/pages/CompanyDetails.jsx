@@ -19,7 +19,7 @@ const CompanyDetails = () => {
         const response = await fetch(
           `${import.meta.env.VITE_BACKEND_ENDPOINT_URL}companies/${companyId}/`
         );
-        const data = await response.json();
+        const data = await response?.json();
         setCompanyDetails(data);
       } catch (e) {
         setToast({
@@ -35,7 +35,7 @@ const CompanyDetails = () => {
             import.meta.env.VITE_BACKEND_ENDPOINT_URL
           }companies/${companyId}/locations/`
         );
-        const data = await response.json();
+        const data = await response?.json();
         setLocations(data);
       } catch (e) {
         setToast({
@@ -62,7 +62,7 @@ const CompanyDetails = () => {
           <p className="mb-4">Address: {companyDetails?.address}</p>
         </div>
       )}
-      {locations.length > 0 && (
+      {locations?.length > 0 && (
         <>
           <TableView
             locations={locations}

@@ -35,9 +35,9 @@ const DistanceChart = ({ locations }) => {
 
   const formatDistance = (miles) => {
     if (miles >= 1000) {
-      return `${(miles / 1000).toFixed(2)} thousand miles`;
+      return `${(miles / 1000)?.toFixed(2)} thousand miles`;
     } else {
-      return `${miles.toFixed(2)} miles`;
+      return `${miles?.toFixed(2)} miles`;
     }
   };
 
@@ -116,7 +116,7 @@ const DistanceChart = ({ locations }) => {
         callbacks: {
           label: (context) => {
             const dataIndex = context?.dataIndex;
-            return distanceData[dataIndex].formattedDistance;
+            return distanceData[dataIndex]?.formattedDistance;
           },
         },
       },
