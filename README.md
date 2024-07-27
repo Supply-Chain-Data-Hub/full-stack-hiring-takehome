@@ -35,6 +35,7 @@ We can run this application in mulitple ways with & without using docker. Below 
 - Clone this Repo
 - make sure you are in the root of this project where the docker-compose.yaml file exists
 - Start/Open the Docker (i.e Docker Desktop to start the docker daemon running)
+  -  Note - make sure docker & docker-compose installed in your system.
 - Run this command in the terminal in root path of this repo
   - "docker-compose up"
 - Application will start run at http://localhost:5173/
