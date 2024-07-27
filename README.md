@@ -30,7 +30,7 @@ I have pushed the docker images to my dockerhub respostories and made it public
 
 We can run this application in mulitple ways with & without using docker. Below are the instructions for 3 different ways:
 
-## 1st - Optimal Number of Steps to make the app up & running to check in browser
+## 1st - Optimal Number of Steps to make the application up & running to check in browser
 
 - Clone this Repo
 - make sure you are in the root of this project where the docker-compose.yaml file exists
