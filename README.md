@@ -61,5 +61,5 @@ services:
     - This will start the backend development server at http://127.0.0.1:8000/
 - Swagger API documentation runs at http://127.0.0.1:8000/swagger/
 
-## Clone & run the application in the local (using Docker)
+
 
