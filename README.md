@@ -36,6 +36,8 @@ services:
 
 - To stop this, Run "docker-compose down"
 
+- Additional Info (My DockerHub Profile URL) - https://hub.docker.com/u/gsprasanna
+
 ## Clone & run the application in the local
 
 - Clone this Repo in vs code
@@ -47,9 +49,11 @@ services:
 - Run "npm install"
 - Run "npm run dev"
     - This will start the frontend development server at http://localhost:5173/
+  
 - In the new terminal, Go to the backend/becompanyportal
-- check if pip3 is intalled in your install. if not make sure it is installed.
 - since Django 5 requires python 3.10 plus. upgrade the python to latest (eg : 3.12.3)
+    - (Note: make sure python path is configured in system path variables);
+- check if pip3 is intalled in your install. if not make sure it is installed.
 - Run "pip3 install --no-cache-dir -r requirements.txt"
     - (Note: if above command is having issue. try below command without quotes
         "pip3 install --no-cache-dir -r requirements.txt --break-system-packages")
@@ -57,4 +61,5 @@ services:
     - This will start the backend development server at http://127.0.0.1:8000/
 - Swagger API documentation runs at http://127.0.0.1:8000/swagger/
 
+## Clone & run the application in the local (using Docker)
 
