@@ -4,7 +4,7 @@ I have pushed the docker images to my dockerhub respostories and made it public
 
 We can run this application in mulitple ways with & without using docker. Below are the instructions for 3 different ways:
 
-## Optimal Step to make the app up & running to check in browser
+## Optimal Number of Steps to make the app up & running to check in browser
 
 - Clone this Repo
 - make sure you are in the root of this project where the docker-compose.yaml file exists
@@ -17,7 +17,7 @@ We can run this application in mulitple ways with & without using docker. Below 
 - To stop this, Run "docker-compose down"
 
 
-## Pull my docker image and run using Docker (Optimal Step to make the app up & running to check in browser)
+## Pull my docker image from my dockerhub repository and run using Docker
 
 - Download Docker (i.e Docker Desktop) if it is not installed in your system and install it.
   - Ensure Docker & Docker Desktop installed in your system.
